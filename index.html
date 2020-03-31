@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño 2</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="./img/logo.png" alt="logo">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sec2</a></li>
+                    <li><a href="#">Sec3</a></li>
+                    <li><a href="#">Sec4</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="info">
+            <div class="overlay"></div>
+            <img src="./img/mobile.png" alt="mob" class="mob">
+            <div class="circulo" id="circulo">
+                <div class="caracteristica uno">
+                    <img src="./img/camera.png" alt="camara">
+                    <div>
+                        <h1>Cámara</h1>
+                        <p>Muchos megapixeles</p>
+                    </div>
+                </div>
+                <div class="caracteristica dos">
+                    <img src="./img/processor.png" alt="procesador">
+                    <div>
+                        <h1>Procesador</h1>
+                        <p>Muy rápido</p>
+                    </div>
+                </div>
+                <div class="caracteristica tres">
+                    <img src="./img/display.png" alt="display">
+                    <div>
+                        <h1>Pantalla</h1>
+                        <p>Muy wrande</p>
+                    </div>
+                </div>
+                <div class="caracteristica cuatro">
+                    <img src="./img/battery.png" alt="bateria">
+                    <div>
+                        <h1>Batería</h1>
+                        <p>4000 mAh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controles">
+            <img src="./img/arrow.png" alt="flecha" id="arriba">
+            <h3>Características</h3>
+            <img src="./img/arrow.png" alt="flecha" id="abajo">
+        </div>
+    </div>
+
+    <script>
+        var circulo = document.getElementById("circulo");
+        var arriba = document.getElementById("arriba");
+        var abajo = document.getElementById("abajo");
+
+        var rotacion = circulo.style.transform;
+        var sumaRotacion;
+
+        arriba.onclick = function(){
+            sumaRotacion = rotacion + "rotate(-90deg)";
+            circulo.style.transform = sumaRotacion;
+            rotacion = sumaRotacion;
+        }
+
+        abajo.onclick = function(){
+            sumaRotacion = rotacion + "rotate(90deg)";
+            circulo.style.transform = sumaRotacion;
+            rotacion = sumaRotacion;
+        }
+    </script>
+</body>
+</html>
